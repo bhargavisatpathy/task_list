@@ -29,7 +29,7 @@ class TasklistsController < ApplicationController
 
   def update
     tasklist = Tasklist.find(params[:id])
-    if tasklist.update(title: params[:tasklist][:title])
+    if tasklist.update(title: params[:tasklist][:title] || params)
       redirect_to root_path
     else
       flash[:errors] = "Please try again!"
@@ -44,6 +44,13 @@ class TasklistsController < ApplicationController
 
   def archived
     @tasklists = Tasklist.where(archived: true)
+  end
+
+  def archive_tasklist
+    tasklist = Tasklist.find(params[:id])
+    tasklist.archived = true
+    tasklist.save
+    redirect_to :back
   end
 
   private

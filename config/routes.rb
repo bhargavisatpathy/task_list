@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
   root 'tasklists#index'
   get 'tasklists/archived' => 'tasklists#archived'
-  
+
   resources :tasklists
+  post "/tasklist/:id" => "tasklists#archive_tasklist", as: "archived_tasklist"
   resources :tasks
 
   # The priority is based upon order of creation: first created -> highest priority.

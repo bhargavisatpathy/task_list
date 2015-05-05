@@ -9,8 +9,6 @@
     No of tasks <%= tasklist.tasks.count %>
 
     <%= button_to "Rename Tasklist", edit_tasklist_path(tasklist), method: :get %>
-
-    
-
+    <%= button_to "Archive", archived_tasklist_path(tasklist)%>
   </div>
 <% end %>

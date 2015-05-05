@@ -48,6 +48,16 @@ RSpec.feature 'UserTasklists', type: :feature do
     expect(page).to have_no_content('tasklist')
   end
 
+  it 'can archive a tasklist' do
+    tasklist1 = create(:tasklist, archived: false)
+
+    visit '/'
+    expect(page).to have_button('Archive')
+
+    click_link_or_button('Archive')
+    expect(page).to have_no_content('tasklist')
+  end
+
   xit 'can create a task' do
     visit '/'
     click_link_or

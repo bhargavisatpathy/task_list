@@ -1,0 +1,14 @@
+<div><%= button_to "Create Task", new_task_path, method: :get, class: "btn btn-default" %></div>
+
+<h2>Task List</h2>
+
+<% @tasks.each do |task| %>
+  <div class="task-list">
+    Title <%= task.title %>
+    Description <%= task.description %>
+
+    <%= button_to "Edit Task", edit_task_path(task), method: :get, class: "btn btn-default" %>
+    <%= button_to "Delete Task", task_path(task), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-default" %>
+
+  </div>
+<% end %>

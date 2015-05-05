@@ -11,7 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150505145748) do
+ActiveRecord::Schema.define(version: 20150505165531) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
+  create_table "tasklists", force: :cascade do |t|
+    t.string   "title"
+    t.boolean  "archived",   default: false
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+  end
 
   create_table "tasks", force: :cascade do |t|
     t.string   "title"
@@ -21,6 +31,10 @@ ActiveRecord::Schema.define(version: 20150505145748) do
     t.boolean  "archive",     default: true
     t.datetime "created_at",                         null: false
     t.datetime "updated_at",                         null: false
+    t.integer  "tasklist_id"
   end
 
+  add_index "tasks", ["tasklist_id"], name: "index_tasks_on_tasklist_id", using: :btree
+
+  add_foreign_key "tasks", "tasklists"
 end

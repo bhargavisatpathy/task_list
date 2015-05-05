@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  root 'tasklists#index'
+  get 'tasklists/archived' => 'tasklists#archived'
+  
+  resources :tasklists
+  resources :tasks
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

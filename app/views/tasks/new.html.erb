@@ -1,14 +1,12 @@
 <h4>Create a New Task Here</h4>
-<%= form_for @task  do |f| %>
+<%= form_for @task, url: tasklist_tasks_path(@tasklist, @task)  do |f| %>
   <div class="form-new-list">
     <%= f.label(:title, "Title") %>
     <%= f.text_field :title %>
 
 
-    <%= f.label:Decription %>
+    <%= f.label(:decsription, "Description") %>
     <%= f.text_field :description %>
-
     <%= f.submit "Submit", class: "btn btn-success" %>
   </div>
 <% end %>
-  

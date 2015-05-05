@@ -1,5 +1,6 @@
 class TasksController < ApplicationController
   def new
+    @tasklist = Tasklist.find(params[:tasklist_id])
     @task = Task.new
   end
 
@@ -9,9 +10,10 @@ class TasksController < ApplicationController
 
   def create
     task = Task.new(task_params)
+    task.tasklist_id = params["tasklist_id"].to_i
     if task.save
       flash[:success] = "You created a new task!"
-      redirect_to tasks_path
+      redirect_to tasklist_path(task.tasklist_id)
 
     else
       flash[:errors] = "Sorry, your task was not created. Please try again."
@@ -25,21 +27,13 @@ class TasksController < ApplicationController
 
   def update
     @task = Task.find(params[:id])
-    # @plan.select_option(params[:option].to_i)
-    # @plan.status = "finalized"
-    # if @plan.save
-    #   invite_friends
-    #   flash[:notice] = "Final invitation was sent to your friends!"
-    #   redirect_to plans_path
-    # else
-    #   render :edit
-    # end
+
   end
 
 
   def destroy
-    Task.destroy(params[:id])
-    redirect_to tasks_path
+    task = Task.destroy(params[:id])
+    redirect_to tasklist_path(task.tasklist_id)
   end
 
   private

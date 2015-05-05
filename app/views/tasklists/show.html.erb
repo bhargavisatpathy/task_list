@@ -1,7 +1,10 @@
 <h3><%= @tasklist.title %></h3>
+<div><%= button_to "Create Task", new_tasklist_task_path(@tasklist), method: :get, class: "btn btn-default" %></div>
 <h4>Tasks</h4>
 <ul>
   <% @tasklist.tasks.each do |task| %>
   <li><%= task.title %> <%= task.description %></li>
+  <%= button_to "Edit Task", edit_tasklist_task_path(@tasklist, task), method: :get, class: "btn btn-default" %>
+  <%= button_to "Delete Task", tasklist_task_path(@tasklist, task), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-default" %>
   <% end %>
 </ul>

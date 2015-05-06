@@ -1,7 +1,7 @@
 <h3><%= @tasklist.title %></h3>
 <h4>Tasks</h4>
 <div><%= button_to "Create Task", new_tasklist_task_path(@tasklist), method: :get%></div>
-<label><input type="checkbox" id="show_completed_cb">Show Completed Tasks</label>
+<label><input type="checkbox" id="show_completed_cb">Show All Tasks</label>
 <table id="tasks" class="tablesorter">
   <thead>
     <tr>
@@ -14,10 +14,11 @@
         <td><%= task.title %></td>
         <td><%= task.description %></td>
         <td><%= task.due_date %></td>
-        <%= form_for task, url: {action: "update"}  do |f| %>
+        <td>
+        <%= form_for task, url: tasklist_task_path(@tasklist, task), remote: true  do |f| %>
           <%= f.select :status, options_for_select(Task.statuses.map {|k,v| [k]}, task.status) %><br/>
-          <%= f.submit "Submit", class: "btn btn-success" %>
         <% end %>
+        </td>
         <td><%= button_to "Edit", edit_tasklist_task_path(@tasklist, task), method: :get%></td>
         <td><%= button_to "Delete", tasklist_task_path(@tasklist, task), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-default" %></td>
       </tr>
@@ -31,12 +32,11 @@
     $(document).ready(function(){
       $("#tasks").tablesorter({
         headers: {
+            3: {sorter: false},
             4: {sorter: false},
             5: {sorter: false}
         }
       });
-
-      
 
       if($('#show_completed_cb').attr("checked")) {
         $(".Complete").show();
@@ -46,5 +46,10 @@
       $('#show_completed_cb').click(function(){
         $(".Complete").toggle();
       });
+
+      $('.edit_task select').change(function(){
+        $(this).parent('form').submit();
+      });
     });
+
 </script>

@@ -1,4 +1,7 @@
 class TasksController < ApplicationController
+
+  skip_before_action :verify_authenticity_token
+  
   def new
     @tasklist = Tasklist.find(params[:tasklist_id])
     @task = Task.new
@@ -27,7 +30,10 @@ class TasksController < ApplicationController
     @tasklist = Tasklist.find(params[:tasklist_id])
     if @task.update(task_params)
       flash[:success] = "Your task was updated!"
-      redirect_to tasklist_path(@tasklist)
+      respond_to do |format|
+        format.html { redirect_to tasklist_path(@tasklist) }
+        format.js
+      end
     else
       flash[:errors] = @task.errors.full_messages
       render :edit

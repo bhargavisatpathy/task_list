@@ -16,9 +16,9 @@
   <tbody>
     <% @tasklist.tasks.each do |task| %>
       <tr class="<%= task.status %>">
-        <td><%= task.title %></td>
-        <td><%= task.description %></td>
-        <td><%= task.due_date %></td>
+        <td width='50'><%= task.title %></td>
+        <td width='150'><%= task.description %></td>
+        <td width='80'><%= task.due_date %></td>
         <td>
         <%= form_for task, url: tasklist_task_path(@tasklist, task), remote: true  do |f| %>
           <%= f.select :status, options_for_select(Task.statuses.map {|k,v| [k]}, task.status) %><br/>

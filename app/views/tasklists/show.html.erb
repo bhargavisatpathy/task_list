@@ -69,8 +69,8 @@
     $("#filter").keyup(function() {
         var search = $(this).val();
         $("tr").show();
-        if (search) $("tbody tr").not(":containsNoCase(" + search + ")").hide();
         $(document).checkShowAllTasks();
+        if (search) $("tbody tr").not(":containsNoCase(" + search + ")").hide();
     });
   });
 

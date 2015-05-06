@@ -4,6 +4,7 @@
     <%= f.label(:title, "Title") %>
     <%= f.text_field :title %>
 
-    <%= f.submit "Submit", class: "btn btn-success" %>
   </div>
+  <%= f.submit "Ok", class: "btn btn-success" %>
+  <%= button_to "Cancel", root_path, method: :get %>
 <% end %>

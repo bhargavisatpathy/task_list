@@ -1,8 +1,14 @@
 <h4>Archived Tasklists</h4>
-<ul>
+<table>
+
+  <tr><th>Title</th><th></th></tr>
   <% @tasklists.each do |tasklist| %>
-  <li><%= tasklist.title %></li>
-  <%= button_to "Delete Tasklist", tasklist_path(tasklist), method: :delete,
-              data: { confirm: 'Are you sure?' }, class: "btn btn-default" %>
+    <tr><td><%= tasklist.title %></td>
+      <td>
+      <%= button_to "Delete", tasklist_path(tasklist), method: :delete,
+                  data: { confirm: 'Are you sure?' }, class: "btn btn-default" %>
+      </td>
+    </tr>
   <% end %>
-</ul>
+</table>
+<%= button_to "Back", root_path, method: :get %>

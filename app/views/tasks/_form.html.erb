@@ -1,0 +1,9 @@
+<%= f.label(:title, "Title") %>
+<%= f.text_field :title %><br/>
+<%= f.label(:description, "Description") %>
+<%= f.text_field :description %><br/>
+<%= f.label(:due_date, "Due Date") %>
+<%= f.date_field :due_date %><br/>
+<%= f.label(:staus, "Status") %>
+<%= f.select :status, options_for_select(Task.statuses.map {|k,v| [k]}, task.status) %><br/>
+<%= f.submit "Submit", class: "btn btn-success" %>

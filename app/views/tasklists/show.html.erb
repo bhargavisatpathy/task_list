@@ -1,10 +1,50 @@
 <h3><%= @tasklist.title %></h3>
-<div><%= button_to "Create Task", new_tasklist_task_path(@tasklist), method: :get, class: "btn btn-default" %></div>
 <h4>Tasks</h4>
-<ul>
-  <% @tasklist.tasks.each do |task| %>
-  <li><%= task.title %> <%= task.description %></li>
-  <%= button_to "Edit Task", edit_tasklist_task_path(@tasklist, task), method: :get, class: "btn btn-default" %>
-  <%= button_to "Delete Task", tasklist_task_path(@tasklist, task), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-default" %>
-  <% end %>
-</ul>
+<div><%= button_to "Create Task", new_tasklist_task_path(@tasklist), method: :get%></div>
+<label><input type="checkbox" id="show_completed_cb">Show Completed Tasks</label>
+<table id="tasks" class="tablesorter">
+  <thead>
+    <tr>
+      <th>Title</th><th>Description</th><th>Due Date</th><th>Status</th><th></th><th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @tasklist.tasks.each do |task| %>
+      <tr class="<%= task.status %>">
+        <td><%= task.title %></td>
+        <td><%= task.description %></td>
+        <td><%= task.due_date %></td>
+        <%= form_for task, url: {action: "update"}  do |f| %>
+          <%= f.select :status, options_for_select(Task.statuses.map {|k,v| [k]}, task.status) %><br/>
+          <%= f.submit "Submit", class: "btn btn-success" %>
+        <% end %>
+        <td><%= button_to "Edit", edit_tasklist_task_path(@tasklist, task), method: :get%></td>
+        <td><%= button_to "Delete", tasklist_task_path(@tasklist, task), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-default" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<%= button_to "Back", root_path, method: :get %>
+
+
+<script type="text/javascript">
+    $(document).ready(function(){
+      $("#tasks").tablesorter({
+        headers: {
+            4: {sorter: false},
+            5: {sorter: false}
+        }
+      });
+
+      
+
+      if($('#show_completed_cb').attr("checked")) {
+        $(".Complete").show();
+      } else {
+        $(".Complete").hide();
+      }
+      $('#show_completed_cb').click(function(){
+        $(".Complete").toggle();
+      });
+    });
+</script>

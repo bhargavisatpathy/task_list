@@ -4,16 +4,16 @@ class TasklistsController < ApplicationController
   end
 
   def index
-    @tasklists = Tasklist.where(archived: false)
+    @tasklists = Tasklist.active
   end
 
   def create
-    tasklist = Tasklist.new(tasklist_params)
-    if tasklist.save
+    @tasklist = Tasklist.new(tasklist_params)
+    if @tasklist.save
       flash[:success] = "You created a new tasklist!"
       redirect_to root_path
     else
-      flash[:errors] = "Sorry, your tasklist was not created. Please try again."
+      flash[:errors] = @tasklist.errors.full_messages
       render :new
     end
   end
@@ -28,22 +28,23 @@ class TasklistsController < ApplicationController
   end
 
   def update
-    tasklist = Tasklist.find(params[:id])
-    if tasklist.update(title: params[:tasklist][:title] || params)
+    @tasklist = Tasklist.find(params[:id])
+    if @tasklist.update(tasklist_params)
+      flash[:success] = "Your tasklist have been renamed!"
       redirect_to root_path
     else
-      flash[:errors] = "Please try again!"
+      flash[:errors] = @tasklist.errors.full_messages
       render :edit
     end
   end
 
   def destroy
     Tasklist.destroy(params[:id])
-    redirect_to root_path
+    redirect_to tasklists_archived_path
   end
 
   def archived
-    @tasklists = Tasklist.where(archived: true)
+    @tasklists = Tasklist.archived
   end
 
   def archive_tasklist

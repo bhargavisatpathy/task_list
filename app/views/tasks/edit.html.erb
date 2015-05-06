@@ -1,1 +1,4 @@
 <h4>Edit Task </h4>
+<%= form_for @task, url: {action: "update"}  do |f| %>
+  <%= render partial: "tasks/form", locals: { f: f, task: @task } %>
+<% end %>

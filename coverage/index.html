@@ -14,27 +14,27 @@
       <img src="./assets/0.8.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2015-05-06T06:50:07-06:00">2015-05-06T06:50:07-06:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2015-05-06T10:17:15-06:00">2015-05-06T10:17:15-06:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">95.06%</span></span>
+    (<span class="covered_percent"><span class="green">96.69%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.1
+         1.18
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
-    <b>30</b> files in total.
-    <b>243</b> relevant lines. 
-    <span class="green"><b>231</b> lines covered</span> and
-    <span class="red"><b>12</b> lines missed </span>
+    <b>31</b> files in total.
+    <b>242</b> relevant lines. 
+    <span class="green"><b>234</b> lines covered</span> and
+    <span class="red"><b>8</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -62,12 +62,12 @@
       
       <tr>
         <td class="strong"><a href="#d0e7d695b45e74ee79c12207cfc17002427a70c4" class="src_link" title="app/controllers/tasklists_controller.rb">app/controllers/tasklists_controller.rb</a></td>
-        <td class="red strong">78.38 %</td>
+        <td class="yellow strong">89.19 %</td>
         <td>62</td>
         <td>37</td>
-        <td>29</td>
-        <td>8</td>
-        <td>1.4</td>
+        <td>33</td>
+        <td>4</td>
+        <td>1.8</td>
       </tr>
       
       <tr>
@@ -127,7 +127,7 @@
         <td>5</td>
         <td>5</td>
         <td>0</td>
-        <td>3.8</td>
+        <td>4.4</td>
       </tr>
       
       <tr>
@@ -231,6 +231,16 @@
       </tr>
       
       <tr>
+        <td class="strong"><a href="#def84105a485711dc9ee8935e52f4653a6f2f4a7" class="src_link" title="config/initializers/paperclip.rb">config/initializers/paperclip.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>1</td>
+        <td>1</td>
+        <td>1</td>
+        <td>0</td>
+        <td>1.0</td>
+      </tr>
+      
+      <tr>
         <td class="strong"><a href="#8592bd49cacc76dd66be6f3b1adbc077ef3b1d38" class="src_link" title="config/initializers/session_store.rb">config/initializers/session_store.rb</a></td>
         <td class="green strong">100.0 %</td>
         <td>3</td>
@@ -303,9 +313,9 @@
       <tr>
         <td class="strong"><a href="#c3c007325333262a859e4ee67eb91dbee3964e9a" class="src_link" title="spec/helpers/tasklists_helper_spec.rb">spec/helpers/tasklists_helper_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>15</td>
-        <td>3</td>
-        <td>3</td>
+        <td>14</td>
+        <td>2</td>
+        <td>2</td>
         <td>0</td>
         <td>1.0</td>
       </tr>
@@ -313,9 +323,9 @@
       <tr>
         <td class="strong"><a href="#c6379e6c456754d6565a1180d77c6d83244e9d5b" class="src_link" title="spec/helpers/tasks_helper_spec.rb">spec/helpers/tasks_helper_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>15</td>
-        <td>3</td>
-        <td>3</td>
+        <td>14</td>
+        <td>2</td>
+        <td>2</td>
         <td>0</td>
         <td>1.0</td>
       </tr>
@@ -417,11 +427,11 @@
         <div class="source_table" id="d0e7d695b45e74ee79c12207cfc17002427a70c4">
   <div class="header">
     <h3>app/controllers/tasklists_controller.rb</h3>
-    <h4><span class="red">78.38 %</span> covered</h4>
+    <h4><span class="yellow">89.19 %</span> covered</h4>
     <div>
       <b>37</b> relevant lines. 
-      <span class="green"><b>29</b> lines covered</span> and
-      <span class="red"><b>8</b> lines missed.</span>
+      <span class="green"><b>33</b> lines covered</span> and
+      <span class="red"><b>4</b> lines missed.</span>
     </div>
   </div>
   
@@ -464,8 +474,8 @@
           <code class="ruby">  def index</code>
         </li>
       
-        <li class="covered" data-hits="11" data-linenumber="7">
-          <span class="hits">11</span>
+        <li class="covered" data-hits="12" data-linenumber="7">
+          <span class="hits">12</span>
           
           <code class="ruby">    @tasklists = Tasklist.active</code>
         </li>
@@ -488,26 +498,26 @@
           <code class="ruby">  def create</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="11">
-          
+        <li class="covered" data-hits="1" data-linenumber="11">
+          <span class="hits">1</span>
           
           <code class="ruby">    @tasklist = Tasklist.new(tasklist_params)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="12">
-          
+        <li class="covered" data-hits="1" data-linenumber="12">
+          <span class="hits">1</span>
           
           <code class="ruby">    if @tasklist.save</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="13">
-          
+        <li class="covered" data-hits="1" data-linenumber="13">
+          <span class="hits">1</span>
           
           <code class="ruby">      flash[:success] = &quot;You created a new tasklist!&quot;</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="14">
-          
+        <li class="covered" data-hits="1" data-linenumber="14">
+          <span class="hits">1</span>
           
           <code class="ruby">      redirect_to root_path</code>
         </li>
@@ -554,14 +564,14 @@
           <code class="ruby">  def show</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="22">
-          <span class="hits">6</span>
+        <li class="covered" data-hits="7" data-linenumber="22">
+          <span class="hits">7</span>
           
           <code class="ruby">    @tasklist = Tasklist.find(params[:id])</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="23">
-          <span class="hits">6</span>
+        <li class="covered" data-hits="7" data-linenumber="23">
+          <span class="hits">7</span>
           
           <code class="ruby">    @tasks = @tasklist.tasks</code>
         </li>
@@ -584,8 +594,8 @@
           <code class="ruby">  def edit</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="27">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="2" data-linenumber="27">
+          <span class="hits">2</span>
           
           <code class="ruby">    @tasklist = Tasklist.find(params[:id])</code>
         </li>
@@ -608,26 +618,26 @@
           <code class="ruby">  def update</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="31">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="2" data-linenumber="31">
+          <span class="hits">2</span>
           
           <code class="ruby">    @tasklist = Tasklist.find(params[:id])</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="32">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="2" data-linenumber="32">
+          <span class="hits">2</span>
           
           <code class="ruby">    if @tasklist.update(tasklist_params)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="33">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="2" data-linenumber="33">
+          <span class="hits">2</span>
           
           <code class="ruby">      flash[:success] = &quot;Your tasklist have been renamed!&quot;</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="34">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="2" data-linenumber="34">
+          <span class="hits">2</span>
           
           <code class="ruby">      redirect_to root_path</code>
         </li>
@@ -704,8 +714,8 @@
           <code class="ruby">  def archived</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="47">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="4" data-linenumber="47">
+          <span class="hits">4</span>
           
           <code class="ruby">    @tasklists = Tasklist.archived</code>
         </li>
@@ -782,8 +792,8 @@
           <code class="ruby">  def tasklist_params</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="60">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="3" data-linenumber="60">
+          <span class="hits">3</span>
           
           <code class="ruby">    params.require(:tasklist).permit(:title)</code>
         </li>
@@ -1370,14 +1380,14 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="12" data-linenumber="5">
-          <span class="hits">12</span>
+        <li class="covered" data-hits="13" data-linenumber="5">
+          <span class="hits">13</span>
           
           <code class="ruby">  scope :active, -&gt; { where(archived: false) }</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="6">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="6" data-linenumber="6">
+          <span class="hits">6</span>
           
           <code class="ruby">  scope :archived, -&gt; { where(archived: true) }</code>
         </li>
@@ -2292,6 +2302,30 @@
           
           
           <code class="ruby"># Mime::Type.register &quot;text/richtext&quot;, :rtf</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+      
+        <div class="source_table" id="def84105a485711dc9ee8935e52f4653a6f2f4a7">
+  <div class="header">
+    <h3>config/initializers/paperclip.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>1</b> relevant lines. 
+      <span class="green"><b>1</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">Paperclip::Attachment.default_options[:s3_host_name] = &#39;s3-us-west-2.amazonaws.com&#39;</code>
         </li>
       
     </ol>
@@ -3659,8 +3693,8 @@
     <h3>spec/helpers/tasklists_helper_spec.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>3</b> relevant lines. 
-      <span class="green"><b>3</b> lines covered</span> and
+      <b>2</b> relevant lines. 
+      <span class="green"><b>2</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -3746,13 +3780,7 @@
           <code class="ruby">RSpec.describe TasklistsHelper, type: :helper do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="14">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  pending &quot;add some examples to (or delete) #{__FILE__}&quot;</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="15">
+        <li class="never" data-hits="" data-linenumber="14">
           
           
           <code class="ruby">end</code>
@@ -3767,8 +3795,8 @@
     <h3>spec/helpers/tasks_helper_spec.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>3</b> relevant lines. 
-      <span class="green"><b>3</b> lines covered</span> and
+      <b>2</b> relevant lines. 
+      <span class="green"><b>2</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -3854,13 +3882,7 @@
           <code class="ruby">RSpec.describe TasksHelper, type: :helper do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="14">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  pending &quot;add some examples to (or delete) #{__FILE__}&quot;</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="15">
+        <li class="never" data-hits="" data-linenumber="14">
           
           
           <code class="ruby">end</code>

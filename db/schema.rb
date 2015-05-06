@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150506033006) do
+ActiveRecord::Schema.define(version: 20150506111656) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,11 +27,15 @@ ActiveRecord::Schema.define(version: 20150506033006) do
     t.string   "title"
     t.string   "description"
     t.date     "due_date"
-    t.boolean  "archive",     default: true
-    t.datetime "created_at",                 null: false
-    t.datetime "updated_at",                 null: false
+    t.boolean  "archive",                 default: true
+    t.datetime "created_at",                             null: false
+    t.datetime "updated_at",                             null: false
     t.integer  "tasklist_id"
-    t.integer  "status",      default: 0
+    t.integer  "status",                  default: 0
+    t.string   "attachment_file_name"
+    t.string   "attachment_content_type"
+    t.integer  "attachment_file_size"
+    t.datetime "attachment_updated_at"
   end
 
   add_index "tasks", ["tasklist_id"], name: "index_tasks_on_tasklist_id", using: :btree

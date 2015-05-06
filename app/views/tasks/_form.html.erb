@@ -4,6 +4,14 @@
 <%= f.text_field :description %><br/>
 <%= f.label(:due_date, "Due Date") %>
 <%= f.date_field :due_date %><br/>
-<%= f.label(:staus, "Status") %>
+<%= f.label(:status, "Status") %>
 <%= f.select :status, options_for_select(Task.statuses.map {|k,v| [k]}, task.status) %><br/>
+<p>
+  <% if task.attachment.exists? %>
+    <%= image_tag task.attachment.url(:medium) %><br/>
+    <input id="remove" name="remove" type="checkbox">Remove</input><br/></br>
+    <%= f.label(:replace, "Replace") %>
+  <% end %>
+  <%= f.file_field :attachment %>
+</p>
 <%= f.submit "Submit", class: "btn btn-success" %>

@@ -1,7 +1,7 @@
 class TasksController < ApplicationController
 
   skip_before_action :verify_authenticity_token
-  
+
   def new
     @tasklist = Tasklist.find(params[:tasklist_id])
     @task = Task.new
@@ -26,8 +26,8 @@ class TasksController < ApplicationController
 
   def update
     @task = Task.find(params[:id])
-
     @tasklist = Tasklist.find(params[:tasklist_id])
+    @task.attachment = nil if params[:remove] = 'on'
     if @task.update(task_params)
       flash[:success] = "Your task was updated!"
       respond_to do |format|
@@ -49,6 +49,6 @@ class TasksController < ApplicationController
   private
 
   def task_params
-    params.require(:task).permit(:title, :description, :due_date, :status)
+    params.require(:task).permit(:title, :description, :due_date, :status, :attachment)
   end
 end

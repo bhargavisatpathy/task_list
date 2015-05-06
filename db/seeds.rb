@@ -9,15 +9,15 @@
 def create_tasklist
   5.times do |i|
     tasklist = Tasklist.create(title: "tasklist #{i}")
-    tasklist.tasks << Task.create(title: "task #{i}:1", description: "description")
-    tasklist.tasks << Task.create(title: "task #{i}:2", description: "description")
+    tasklist.tasks << Task.create(title: "task #{i}:1", description: "description", due_date: Date.today + (rand*10).days)
+    tasklist.tasks << Task.create(title: "task #{i}:2", description: "description", due_date: Date.today + (rand*10).days)
     tasklist.save
   end
 
   5.times do |i|
     tasklist = Tasklist.create(title: "tasklist #{i}0", archived: true)
-    tasklist.tasks << Task.create(title: "task #{i}0:1", description: "description")
-    tasklist.tasks << Task.create(title: "task #{i}0:2", description: "description")
+    tasklist.tasks << Task.create(title: "task #{i}0:1", description: "description", due_date: Date.today + (rand*10).days)
+    tasklist.tasks << Task.create(title: "task #{i}0:2", description: "description", due_date: Date.today + (rand*10).days)
     tasklist.save
   end
 end

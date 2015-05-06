@@ -9,7 +9,7 @@
 <p>
   <% if task.attachment.exists? %>
     <%= image_tag task.attachment.url(:medium) %><br/>
-    <input id="remove" name="remove" type="checkbox">Remove</input><br/></br>
+    <input id="remove" name="remove" type="checkbox">Remove Attachment</input><br/></br>
     <%= f.label(:replace, "Replace") %>
   <% end %>
   <%= f.file_field :attachment %>

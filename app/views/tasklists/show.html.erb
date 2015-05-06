@@ -2,6 +2,11 @@
 <h4>Tasks</h4>
 <div><%= button_to "Create Task", new_tasklist_task_path(@tasklist), method: :get%></div>
 <label><input type="checkbox" id="show_completed_cb">Show All Tasks</label>
+
+<form>
+  <input id= "filter" type="text" name="filter" placeholder="filter">
+</form>
+
 <table id="tasks" class="tablesorter">
   <thead>
     <tr>
@@ -29,27 +34,44 @@
 
 
 <script type="text/javascript">
-    $(document).ready(function(){
-      $("#tasks").tablesorter({
-        headers: {
-            3: {sorter: false},
-            4: {sorter: false},
-            5: {sorter: false}
-        }
-      });
+  jQuery.fn.checkShowAllTasks = function(){
+    if($('#show_completed_cb').attr("checked")) {
+      $(".Complete").show();
+    } else {
+      $(".Complete").hide();
+    }
+  }
 
-      if($('#show_completed_cb').attr("checked")) {
-        $(".Complete").show();
-      } else {
-        $(".Complete").hide();
+  $(document).ready(function(){
+    $("#tasks").tablesorter({
+      headers: {
+          3: {sorter: false},
+          4: {sorter: false},
+          5: {sorter: false}
       }
-      $('#show_completed_cb').click(function(){
-        $(".Complete").toggle();
-      });
-
-      $('.edit_task select').change(function(){
-        $(this).parent('form').submit();
-      });
     });
+
+    $(document).checkShowAllTasks();
+    $('#show_completed_cb').click(function(){
+      $(document).checkShowAllTasks();
+    });
+
+    $('.edit_task select').change(function(){
+      $(this).parent('form').submit();
+    });
+
+    $.expr[":"].containsNoCase = function(el, i, m) {
+      var search = m[3];
+      if (!search) return false;
+      return new RegExp(search, "i").test($(el).text());
+    };
+
+    $("#filter").keyup(function() {
+        var search = $(this).val();
+        $("tr").show();
+        if (search) $("tbody tr").not(":containsNoCase(" + search + ")").hide();
+        $(document).checkShowAllTasks();
+    });
+  });
 
 </script>

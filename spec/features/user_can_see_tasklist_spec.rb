@@ -15,9 +15,9 @@ RSpec.feature 'UserTasklists', type: :feature do
 
     it 'can create a tasklist' do
       visit '/'
-      expect(page).to have_button('Create Tasklist')
+      expect(page).to have_button('Create')
 
-      click_link_or_button('Create Tasklist')
+      click_link_or_button('Create')
       expect(page).to have_content('Create a New Tasklist Here')
     end
 
@@ -25,11 +25,11 @@ RSpec.feature 'UserTasklists', type: :feature do
       tasklist1 = create(:tasklist)
       visit '/'
 
-      click_link_or_button('Rename Tasklist')
+      click_link_or_button('Rename')
       expect(page).to have_content('Rename Task List')
 
       fill_in "tasklist[title]", with: "new_title"
-      click_link_or_button("Submit")
+      click_link_or_button("Ok")
       expect(page).to have_content('new_title')
     end
 
@@ -46,7 +46,7 @@ RSpec.feature 'UserTasklists', type: :feature do
 
       visit '/'
       click_link_or_button('Archived Tasklist')
-      click_link_or_button('Delete Task')
+      click_link_or_button('Delete')
       expect(page).to have_no_content('tasklist')
     end
 
@@ -72,8 +72,8 @@ RSpec.feature 'UserTasklists', type: :feature do
       expect(page).to have_content('Create a New Task Here')
       fill_in "task[title]", with: "new_title"
       fill_in "task[description]", with: "new_description"
-      # click_link_or_button("Submit")
-      # expect(page).to have_content("tasklist1")
+      click_link_or_button("Submit")
+      expect(page).to have_content("tasklist1")
     end
 
     it 'can edit a task' do
@@ -81,10 +81,13 @@ RSpec.feature 'UserTasklists', type: :feature do
       task1 = create(:task, tasklist_id: tasklist1.id)
       visit '/'
       click_link_or_button("tasklist1")
-      expect(page).to have_button('Edit Task')
+      expect(page).to have_button('Edit')
 
-      click_link_or_button('Edit Task')
+      click_link_or_button('Edit')
       expect(page).to have_content('Edit Task')
+      fill_in "task[title]", with: "new_title"
+      click_link_or_button("Submit")
+      expect(page).to have_content("new_title")
     end
 
     it 'can delete a task' do
@@ -93,9 +96,9 @@ RSpec.feature 'UserTasklists', type: :feature do
       visit '/'
 
       click_link_or_button("tasklist1")
-      expect(page).to have_button('Delete Task')
+      expect(page).to have_button('Delete')
 
-      click_link_or_button('Delete Task')
+      click_link_or_button('Delete')
       expect(page).to have_no_content('task1')
     end
   end

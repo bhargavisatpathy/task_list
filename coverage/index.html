@@ -14,27 +14,27 @@
       <img src="./assets/0.8.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2015-05-05T15:59:30-06:00">2015-05-05T15:59:30-06:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2015-05-06T02:41:27-06:00">2015-05-06T02:41:27-06:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">91.4%</span></span>
+    (<span class="covered_percent"><span class="green">95.0%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.01
+         1.11
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>30</b> files in total.
-    <b>221</b> relevant lines. 
-    <span class="green"><b>202</b> lines covered</span> and
-    <span class="red"><b>19</b> lines missed </span>
+    <b>240</b> relevant lines. 
+    <span class="green"><b>228</b> lines covered</span> and
+    <span class="red"><b>12</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -62,22 +62,22 @@
       
       <tr>
         <td class="strong"><a href="#d0e7d695b45e74ee79c12207cfc17002427a70c4" class="src_link" title="app/controllers/tasklists_controller.rb">app/controllers/tasklists_controller.rb</a></td>
-        <td class="red strong">75.0 %</td>
-        <td>61</td>
-        <td>36</td>
-        <td>27</td>
-        <td>9</td>
-        <td>1.3</td>
+        <td class="red strong">78.38 %</td>
+        <td>62</td>
+        <td>37</td>
+        <td>29</td>
+        <td>8</td>
+        <td>1.4</td>
       </tr>
       
       <tr>
         <td class="strong"><a href="#51c29707a7b32401a5bdc92d8188783630baed91" class="src_link" title="app/controllers/tasks_controller.rb">app/controllers/tasks_controller.rb</a></td>
-        <td class="red strong">58.33 %</td>
-        <td>44</td>
-        <td>24</td>
-        <td>14</td>
-        <td>10</td>
-        <td>0.6</td>
+        <td class="yellow strong">87.5 %</td>
+        <td>54</td>
+        <td>32</td>
+        <td>28</td>
+        <td>4</td>
+        <td>0.9</td>
       </tr>
       
       <tr>
@@ -113,9 +113,9 @@
       <tr>
         <td class="strong"><a href="#8da606859a6715582313e3086ce82cbffe786899" class="src_link" title="app/models/task.rb">app/models/task.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>5</td>
-        <td>4</td>
-        <td>4</td>
+        <td>10</td>
+        <td>7</td>
+        <td>7</td>
         <td>0</td>
         <td>1.0</td>
       </tr>
@@ -123,11 +123,11 @@
       <tr>
         <td class="strong"><a href="#933dd8f7a62fa68b8b46deac5efe2d56799652ab" class="src_link" title="app/models/tasklist.rb">app/models/tasklist.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>4</td>
-        <td>3</td>
-        <td>3</td>
+        <td>7</td>
+        <td>5</td>
+        <td>5</td>
         <td>0</td>
-        <td>1.0</td>
+        <td>3.8</td>
       </tr>
       
       <tr>
@@ -293,9 +293,9 @@
       <tr>
         <td class="strong"><a href="#20a82e97b3830236ccbf54285eb6b381fe7bbbb4" class="src_link" title="spec/features/user_can_see_tasklist_spec.rb">spec/features/user_can_see_tasklist_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>102</td>
-        <td>66</td>
-        <td>66</td>
+        <td>105</td>
+        <td>71</td>
+        <td>71</td>
         <td>0</td>
         <td>1.0</td>
       </tr>
@@ -417,11 +417,11 @@
         <div class="source_table" id="d0e7d695b45e74ee79c12207cfc17002427a70c4">
   <div class="header">
     <h3>app/controllers/tasklists_controller.rb</h3>
-    <h4><span class="red">75.0 %</span> covered</h4>
+    <h4><span class="red">78.38 %</span> covered</h4>
     <div>
-      <b>36</b> relevant lines. 
-      <span class="green"><b>27</b> lines covered</span> and
-      <span class="red"><b>9</b> lines missed.</span>
+      <b>37</b> relevant lines. 
+      <span class="green"><b>29</b> lines covered</span> and
+      <span class="red"><b>8</b> lines missed.</span>
     </div>
   </div>
   
@@ -464,10 +464,10 @@
           <code class="ruby">  def index</code>
         </li>
       
-        <li class="covered" data-hits="12" data-linenumber="7">
-          <span class="hits">12</span>
+        <li class="covered" data-hits="11" data-linenumber="7">
+          <span class="hits">11</span>
           
-          <code class="ruby">    @tasklists = Tasklist.where(archived: false)</code>
+          <code class="ruby">    @tasklists = Tasklist.active</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="8">
@@ -491,13 +491,13 @@
         <li class="missed" data-hits="0" data-linenumber="11">
           
           
-          <code class="ruby">    tasklist = Tasklist.new(tasklist_params)</code>
+          <code class="ruby">    @tasklist = Tasklist.new(tasklist_params)</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="12">
           
           
-          <code class="ruby">    if tasklist.save</code>
+          <code class="ruby">    if @tasklist.save</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="13">
@@ -521,7 +521,7 @@
         <li class="missed" data-hits="0" data-linenumber="16">
           
           
-          <code class="ruby">      flash[:errors] = &quot;Sorry, your tasklist was not created. Please try again.&quot;</code>
+          <code class="ruby">      flash[:errors] = @tasklist.errors.full_messages</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="17">
@@ -554,14 +554,14 @@
           <code class="ruby">  def show</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="22">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="6" data-linenumber="22">
+          <span class="hits">6</span>
           
           <code class="ruby">    @tasklist = Tasklist.find(params[:id])</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="23">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="6" data-linenumber="23">
+          <span class="hits">6</span>
           
           <code class="ruby">    @tasks = @tasklist.tasks</code>
         </li>
@@ -611,97 +611,487 @@
         <li class="covered" data-hits="1" data-linenumber="31">
           <span class="hits">1</span>
           
-          <code class="ruby">    tasklist = Tasklist.find(params[:id])</code>
+          <code class="ruby">    @tasklist = Tasklist.find(params[:id])</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="32">
           <span class="hits">1</span>
           
-          <code class="ruby">    if tasklist.update(title: params[:tasklist][:title] || params)</code>
+          <code class="ruby">    if @tasklist.update(tasklist_params)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="33">
           <span class="hits">1</span>
           
+          <code class="ruby">      flash[:success] = &quot;Your tasklist have been renamed!&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="34">
+          <span class="hits">1</span>
+          
           <code class="ruby">      redirect_to root_path</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="34">
+        <li class="never" data-hits="" data-linenumber="35">
           
           
           <code class="ruby">    else</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="35">
+        <li class="missed" data-hits="0" data-linenumber="36">
           
           
-          <code class="ruby">      flash[:errors] = &quot;Please try again!&quot;</code>
+          <code class="ruby">      flash[:errors] = @tasklist.errors.full_messages</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="36">
+        <li class="missed" data-hits="0" data-linenumber="37">
           
           
           <code class="ruby">      render :edit</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="37">
+        <li class="never" data-hits="" data-linenumber="38">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="38">
+        <li class="never" data-hits="" data-linenumber="39">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="39">
+        <li class="never" data-hits="" data-linenumber="40">
           
           
           <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="40">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  def destroy</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="41">
           <span class="hits">1</span>
           
+          <code class="ruby">  def destroy</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="42">
+          <span class="hits">2</span>
+          
           <code class="ruby">    Tasklist.destroy(params[:id])</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="42">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="2" data-linenumber="43">
+          <span class="hits">2</span>
           
-          <code class="ruby">    redirect_to root_path</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="43">
-          
-          
-          <code class="ruby">  end</code>
+          <code class="ruby">    redirect_to tasklists_archived_path</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="44">
           
           
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="45">
+          
+          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="45">
+        <li class="covered" data-hits="1" data-linenumber="46">
           <span class="hits">1</span>
           
           <code class="ruby">  def archived</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="46">
+        <li class="covered" data-hits="3" data-linenumber="47">
+          <span class="hits">3</span>
+          
+          <code class="ruby">    @tasklists = Tasklist.archived</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="48">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="49">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="50">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def archive_tasklist</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="51">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    tasklist = Tasklist.find(params[:id])</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="52">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    tasklist.archived = true</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="53">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    tasklist.save</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="54">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    redirect_to :back</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="55">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="56">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="57">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  private</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="58">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="59">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def tasklist_params</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="60">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    params.require(:tasklist).permit(:title)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="61">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="62">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+      
+        <div class="source_table" id="51c29707a7b32401a5bdc92d8188783630baed91">
+  <div class="header">
+    <h3>app/controllers/tasks_controller.rb</h3>
+    <h4><span class="yellow">87.5 %</span> covered</h4>
+    <div>
+      <b>32</b> relevant lines. 
+      <span class="green"><b>28</b> lines covered</span> and
+      <span class="red"><b>4</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">class TasksController &lt; ApplicationController</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="2">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  skip_before_action :verify_authenticity_token</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="4">
+          
+          
+          <code class="ruby">  </code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="5">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def new</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="6">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    @tasklist = Tasklist.find(params[:tasklist_id])</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="7">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    @task = Task.new</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="8">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="9">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="10">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def create</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="11">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    @tasklist = Tasklist.find(params[:tasklist_id])</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="12">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    @task = Task.new(task_params)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="13">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    @task.tasklist = @tasklist</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="14">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    if @task.save</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="15">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      flash[:success] = &quot;You created a new task!&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="16">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      redirect_to tasklist_path(@tasklist)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="17">
+          
+          
+          <code class="ruby">    else</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="18">
+          
+          
+          <code class="ruby">      flash[:errors] = @task.errors.full_messages</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="19">
+          
+          
+          <code class="ruby">      render :new</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="20">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="21">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="22">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="23">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def edit</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="24">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    @task = Task.find(params[:id])</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="25">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="26">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="27">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def update</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="28">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    @task = Task.find(params[:id])</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="29">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="30">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    @tasklist = Tasklist.find(params[:tasklist_id])</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="31">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    if @task.update(task_params)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="32">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      flash[:success] = &quot;Your task was updated!&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="33">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      respond_to do |format|</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="34">
           <span class="hits">2</span>
           
-          <code class="ruby">    @tasklists = Tasklist.where(archived: true)</code>
+          <code class="ruby">        format.html { redirect_to tasklist_path(@tasklist) }</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="35">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        format.js</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="36">
+          
+          
+          <code class="ruby">      end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="37">
+          
+          
+          <code class="ruby">    else</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="38">
+          
+          
+          <code class="ruby">      flash[:errors] = @task.errors.full_messages</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="39">
+          
+          
+          <code class="ruby">      render :edit</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="40">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="41">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="42">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="43">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="44">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def destroy</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="45">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    task = Task.destroy(params[:id])</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="46">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    redirect_to tasklist_path(task.tasklist_id)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="47">
@@ -719,358 +1109,34 @@
         <li class="covered" data-hits="1" data-linenumber="49">
           <span class="hits">1</span>
           
-          <code class="ruby">  def archive_tasklist</code>
+          <code class="ruby">  private</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="50">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="50">
           
-          <code class="ruby">    tasklist = Tasklist.find(params[:id])</code>
+          
+          <code class="ruby"></code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="51">
           <span class="hits">1</span>
           
-          <code class="ruby">    tasklist.archived = true</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="52">
-          <span class="hits">1</span>
-          
-          <code class="ruby">    tasklist.save</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="53">
-          <span class="hits">1</span>
-          
-          <code class="ruby">    redirect_to :back</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="54">
-          
-          
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="55">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="56">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  private</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="57">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="58">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  def tasklist_params</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="59">
-          
-          
-          <code class="ruby">    params.require(:tasklist).permit(:title)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="60">
-          
-          
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="61">
-          
-          
-          <code class="ruby">end</code>
-        </li>
-      
-    </ol>
-  </pre>
-</div>
-      
-        <div class="source_table" id="51c29707a7b32401a5bdc92d8188783630baed91">
-  <div class="header">
-    <h3>app/controllers/tasks_controller.rb</h3>
-    <h4><span class="red">58.33 %</span> covered</h4>
-    <div>
-      <b>24</b> relevant lines. 
-      <span class="green"><b>14</b> lines covered</span> and
-      <span class="red"><b>10</b> lines missed.</span>
-    </div>
-  </div>
-  
-  <pre>
-    <ol>
-      
-        <li class="covered" data-hits="1" data-linenumber="1">
-          <span class="hits">1</span>
-          
-          <code class="ruby">class TasksController &lt; ApplicationController</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="2">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  def new</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="3">
-          <span class="hits">1</span>
-          
-          <code class="ruby">    @tasklist = Tasklist.find(params[:tasklist_id])</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="4">
-          <span class="hits">1</span>
-          
-          <code class="ruby">    @task = Task.new</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="5">
-          
-          
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="6">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="7">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  def index</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="8">
-          
-          
-          <code class="ruby">    @tasks = Task.all</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="9">
-          
-          
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="10">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="11">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  def create</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="12">
-          
-          
-          <code class="ruby">    task = Task.new(task_params)</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="13">
-          
-          
-          <code class="ruby">    task.tasklist_id = params[&quot;tasklist_id&quot;].to_i</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="14">
-          
-          
-          <code class="ruby">    if task.save</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="15">
-          
-          
-          <code class="ruby">      flash[:success] = &quot;You created a new task!&quot;</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="16">
-          
-          
-          <code class="ruby">      redirect_to tasklist_path(task.tasklist_id)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="17">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="18">
-          
-          
-          <code class="ruby">    else</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="19">
-          
-          
-          <code class="ruby">      flash[:errors] = &quot;Sorry, your task was not created. Please try again.&quot;</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="20">
-          
-          
-          <code class="ruby">      render :new</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="21">
-          
-          
-          <code class="ruby">    end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="22">
-          
-          
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="23">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="24">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  def edit</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="25">
-          <span class="hits">1</span>
-          
-          <code class="ruby">    @task = Task.find(params[:id])</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="26">
-          
-          
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="27">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="28">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  def update</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="29">
-          
-          
-          <code class="ruby">    @task = Task.find(params[:id])</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="30">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="31">
-          
-          
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="32">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="33">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="34">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  def destroy</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="35">
-          <span class="hits">1</span>
-          
-          <code class="ruby">    task = Task.destroy(params[:id])</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="36">
-          <span class="hits">1</span>
-          
-          <code class="ruby">    redirect_to tasklist_path(task.tasklist_id)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="37">
-          
-          
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="38">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="39">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  private</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="40">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="41">
-          <span class="hits">1</span>
-          
           <code class="ruby">  def task_params</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="42">
+        <li class="covered" data-hits="2" data-linenumber="52">
+          <span class="hits">2</span>
           
-          
-          <code class="ruby">    params.require(:task).permit(:title, :decription, :due_date)</code>
+          <code class="ruby">    params.require(:task).permit(:title, :description, :due_date, :status)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="43">
+        <li class="never" data-hits="" data-linenumber="53">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="44">
+        <li class="never" data-hits="" data-linenumber="54">
           
           
           <code class="ruby">end</code>
@@ -1175,8 +1241,8 @@
     <h3>app/models/task.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>4</b> relevant lines. 
-      <span class="green"><b>4</b> lines covered</span> and
+      <b>7</b> relevant lines. 
+      <span class="green"><b>7</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -1211,6 +1277,36 @@
         <li class="never" data-hits="" data-linenumber="5">
           
           
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="6">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  enum status: %w(Incomplete Complete)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="7">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="8">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  scope :completed, -&gt; { where(status: 1) }</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="9">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  scope :incomplete, -&gt; { where(status: 0) }</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="10">
+          
+          
           <code class="ruby">end</code>
         </li>
       
@@ -1223,8 +1319,8 @@
     <h3>app/models/tasklist.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>3</b> relevant lines. 
-      <span class="green"><b>3</b> lines covered</span> and
+      <b>5</b> relevant lines. 
+      <span class="green"><b>5</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -1247,10 +1343,28 @@
         <li class="covered" data-hits="1" data-linenumber="3">
           <span class="hits">1</span>
           
-          <code class="ruby">  validates :title, presence: true, uniqueness: true</code>
+          <code class="ruby">  validates :title, presence: true</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="4">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="12" data-linenumber="5">
+          <span class="hits">12</span>
+          
+          <code class="ruby">  scope :active, -&gt; { where(archived: false) }</code>
+        </li>
+      
+        <li class="covered" data-hits="4" data-linenumber="6">
+          <span class="hits">4</span>
+          
+          <code class="ruby">  scope :archived, -&gt; { where(archived: true) }</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="7">
           
           
           <code class="ruby">end</code>
@@ -2879,8 +2993,8 @@
     <h3>spec/features/user_can_see_tasklist_spec.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>66</b> relevant lines. 
-      <span class="green"><b>66</b> lines covered</span> and
+      <b>71</b> relevant lines. 
+      <span class="green"><b>71</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -2993,7 +3107,7 @@
         <li class="covered" data-hits="1" data-linenumber="18">
           <span class="hits">1</span>
           
-          <code class="ruby">      expect(page).to have_button(&#39;Create Tasklist&#39;)</code>
+          <code class="ruby">      expect(page).to have_button(&#39;Create&#39;)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="19">
@@ -3005,7 +3119,7 @@
         <li class="covered" data-hits="1" data-linenumber="20">
           <span class="hits">1</span>
           
-          <code class="ruby">      click_link_or_button(&#39;Create Tasklist&#39;)</code>
+          <code class="ruby">      click_link_or_button(&#39;Create&#39;)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="21">
@@ -3053,7 +3167,7 @@
         <li class="covered" data-hits="1" data-linenumber="28">
           <span class="hits">1</span>
           
-          <code class="ruby">      click_link_or_button(&#39;Rename Tasklist&#39;)</code>
+          <code class="ruby">      click_link_or_button(&#39;Rename&#39;)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="29">
@@ -3077,7 +3191,7 @@
         <li class="covered" data-hits="1" data-linenumber="32">
           <span class="hits">1</span>
           
-          <code class="ruby">      click_link_or_button(&quot;Submit&quot;)</code>
+          <code class="ruby">      click_link_or_button(&quot;Ok&quot;)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="33">
@@ -3179,7 +3293,7 @@
         <li class="covered" data-hits="1" data-linenumber="49">
           <span class="hits">1</span>
           
-          <code class="ruby">      click_link_or_button(&#39;Delete Task&#39;)</code>
+          <code class="ruby">      click_link_or_button(&#39;Delete&#39;)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="50">
@@ -3332,16 +3446,16 @@
           <code class="ruby">      fill_in &quot;task[description]&quot;, with: &quot;new_description&quot;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="75">
+        <li class="covered" data-hits="1" data-linenumber="75">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">      # click_link_or_button(&quot;Submit&quot;)</code>
+          <code class="ruby">      click_link_or_button(&quot;Submit&quot;)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="76">
+        <li class="covered" data-hits="1" data-linenumber="76">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">      # expect(page).to have_content(&quot;tasklist1&quot;)</code>
+          <code class="ruby">      expect(page).to have_content(&quot;tasklist1&quot;)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="77">
@@ -3389,7 +3503,7 @@
         <li class="covered" data-hits="1" data-linenumber="84">
           <span class="hits">1</span>
           
-          <code class="ruby">      expect(page).to have_button(&#39;Edit Task&#39;)</code>
+          <code class="ruby">      expect(page).to have_button(&#39;Edit&#39;)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="85">
@@ -3401,7 +3515,7 @@
         <li class="covered" data-hits="1" data-linenumber="86">
           <span class="hits">1</span>
           
-          <code class="ruby">      click_link_or_button(&#39;Edit Task&#39;)</code>
+          <code class="ruby">      click_link_or_button(&#39;Edit&#39;)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="87">
@@ -3410,58 +3524,58 @@
           <code class="ruby">      expect(page).to have_content(&#39;Edit Task&#39;)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="88">
+        <li class="covered" data-hits="1" data-linenumber="88">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">    end</code>
+          <code class="ruby">      fill_in &quot;task[title]&quot;, with: &quot;new_title&quot;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="89">
+        <li class="covered" data-hits="1" data-linenumber="89">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby"></code>
+          <code class="ruby">      click_link_or_button(&quot;Submit&quot;)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="90">
           <span class="hits">1</span>
           
-          <code class="ruby">    it &#39;can delete a task&#39; do</code>
+          <code class="ruby">      expect(page).to have_content(&quot;new_title&quot;)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="91">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="91">
           
-          <code class="ruby">      tasklist1 = create(:tasklist, title: &quot;tasklist1&quot;)</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="92">
-          <span class="hits">1</span>
           
-          <code class="ruby">      task1 = create(:task, tasklist_id: tasklist1.id)</code>
+          <code class="ruby">    end</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="93">
-          <span class="hits">1</span>
-          
-          <code class="ruby">      visit &#39;/&#39;</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="94">
+        <li class="never" data-hits="" data-linenumber="92">
           
           
           <code class="ruby"></code>
         </li>
       
+        <li class="covered" data-hits="1" data-linenumber="93">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &#39;can delete a task&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="94">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      tasklist1 = create(:tasklist, title: &quot;tasklist1&quot;)</code>
+        </li>
+      
         <li class="covered" data-hits="1" data-linenumber="95">
           <span class="hits">1</span>
           
-          <code class="ruby">      click_link_or_button(&quot;tasklist1&quot;)</code>
+          <code class="ruby">      task1 = create(:task, tasklist_id: tasklist1.id)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="96">
           <span class="hits">1</span>
           
-          <code class="ruby">      expect(page).to have_button(&#39;Delete Task&#39;)</code>
+          <code class="ruby">      visit &#39;/&#39;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="97">
@@ -3473,28 +3587,46 @@
         <li class="covered" data-hits="1" data-linenumber="98">
           <span class="hits">1</span>
           
-          <code class="ruby">      click_link_or_button(&#39;Delete Task&#39;)</code>
+          <code class="ruby">      click_link_or_button(&quot;tasklist1&quot;)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="99">
           <span class="hits">1</span>
           
-          <code class="ruby">      expect(page).to have_no_content(&#39;task1&#39;)</code>
+          <code class="ruby">      expect(page).to have_button(&#39;Delete&#39;)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="100">
           
           
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="101">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      click_link_or_button(&#39;Delete&#39;)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="102">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(page).to have_no_content(&#39;task1&#39;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="103">
+          
+          
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="101">
+        <li class="never" data-hits="" data-linenumber="104">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="102">
+        <li class="never" data-hits="" data-linenumber="105">
           
           
           <code class="ruby">end</code>
